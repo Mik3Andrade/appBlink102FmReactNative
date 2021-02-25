@@ -48,6 +48,10 @@ target 'blink_102Fm' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'blink_102FmTests' do
     inherit! :complete
     # Pods for testing
