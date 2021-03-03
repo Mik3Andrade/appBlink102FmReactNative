@@ -25,7 +25,9 @@ const imageBackground =
 import icone from '../../assets/icone.png';
 
 export default function App() {
-  const [url] = useState('https://playerservices.streamtheworld.com/api/livestream-redirect/BLINK102FMAAC.aac');
+  const [url] = useState(
+    'https://playerservices.streamtheworld.com/api/livestream-redirect/BLINK102FMAAC.aac',
+  );
   const [play, setPlay] = useState(false);
   const events = [
     TrackPlayerEvents.REMOTE_PLAY,
@@ -72,7 +74,6 @@ export default function App() {
     });
   }
 
-
   async function handlePlayStop() {
     setPlay(!play);
     const currentTrack = await TrackPlayer.getCurrentTrack();
@@ -93,13 +94,11 @@ export default function App() {
   }
 
   useEffect(() => {
-  
-
     setup();
 
     TrackPlayer.addEventListener(
       'playback-metadata-received',
-      async response => {
+      async (response) => {
         console.log('O que tem no data', response);
         const {album, artist, genre, source, title} = response;
         const currentTrack = await TrackPlayer.getCurrentTrack();
@@ -120,17 +119,17 @@ export default function App() {
       },
     );
 
-    TrackPlayer.addEventListener('remote-stop', async response => {
+    TrackPlayer.addEventListener('remote-stop', async (response) => {
       console.log('Caiu no stop');
       setPlay(false);
     });
 
-    TrackPlayer.addEventListener('remote-pause', async response => {
+    TrackPlayer.addEventListener('remote-pause', async (response) => {
       console.log('Caiu no pause', play);
       setPlay(false);
     });
 
-    TrackPlayer.addEventListener('remote-play', async response => {
+    TrackPlayer.addEventListener('remote-play', async (response) => {
       console.log('Caiu no play', play);
       setPlay(true);
     });
