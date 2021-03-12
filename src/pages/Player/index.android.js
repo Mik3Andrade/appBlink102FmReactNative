@@ -24,7 +24,17 @@ const imageBackground =
 // this is the initial of the notification
 import icone from '../../assets/icone.png';
 
-export default function App() {
+export function playAndroid() {
+  this.playerVideo.pause();
+  console.log('Caiu no Son');
+  global.playPlayer();
+}
+
+export function pauseAndroid() {
+  global.pausePlayer();
+}
+
+export function PlayerAudio() {
   const [url] = useState(
     'https://playerservices.streamtheworld.com/api/livestream-redirect/BLINK102FMAAC.aac',
   );
@@ -40,11 +50,11 @@ export default function App() {
 
   const [track, setTrack] = useState({
     album: '',
-    artist: 'Radio Artitst',
+    artist: '',
     date: '',
     genre: '',
     source: imageBackground,
-    title: 'Radio Title',
+    title: '',
     artwork: icone,
   });
   const playbackState = usePlaybackState();
@@ -74,8 +84,11 @@ export default function App() {
     });
   }
 
-  async function handlePlayStop() {
-    setPlay(!play);
+  global.pausePlayer = async function pausePlayerF() {
+    await TrackPlayer.pause();
+  };
+
+  global.playPlayer = async function handlePlayStop() {
     const currentTrack = await TrackPlayer.getCurrentTrack();
 
     if (currentTrack == null) {
@@ -91,7 +104,7 @@ export default function App() {
         await TrackPlayer.pause();
       }
     }
-  }
+  };
 
   useEffect(() => {
     setup();
@@ -137,21 +150,9 @@ export default function App() {
 
   return (
     <View style={styles.ContainerView}>
-      <View style={styles.ContainerItems}>
-        <TouchableOpacity onPress={handlePlayStop} style={{marginRight: 10}}>
-          <Image
-            style={styles.btnImgPlay}
-            source={
-              play
-                ? require('../../assets/pause2.png')
-                : require('../../assets/play2.png')
-            }
-          />
-        </TouchableOpacity>
-        <View>
-          <Text style={styles.textTrackTitle}>{track.artist}</Text>
-          <Text style={styles.textTrackArtist}>{track.title}</Text>
-        </View>
+      <View style={styles.textContainer}>
+        <Text style={styles.textTrackTitle}>{track.artist}</Text>
+        <Text style={styles.textTrackArtist}>{track.title}</Text>
       </View>
     </View>
   );
@@ -159,7 +160,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   ContainerView: {
-    backgroundColor: '#fff',
     position: 'absolute',
     bottom: 0,
     left: 0,
@@ -167,10 +167,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     height: 80,
-    paddingLeft: 10,
-    paddingRight: 10,
-    borderColor: '#000033',
-    borderTopWidth: 1,
+    marginBottom: 30,
   },
   ContainerItems: {
     width: '90%',
@@ -183,14 +180,22 @@ const styles = StyleSheet.create({
     height: 46,
     alignItems: 'center',
   },
+  textContainer: {
+    width: '100%',
+  },
   textTrackTitle: {
-    fontSize: 15,
+    textAlign: 'center',
+    fontSize: 20,
     color: '#000',
     fontWeight: 'bold',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   textTrackArtist: {
-    fontSize: 14,
+    textAlign: 'center',
+    fontSize: 19,
     color: '#000',
-    fontWeight: 'normal',
+    fontWeight: 'bold',
   },
 });
