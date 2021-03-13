@@ -150,24 +150,14 @@ export function PlayerAudio() {
 
   return (
     <View style={styles.ContainerView}>
-      <View style={styles.textContainer}>
-        <Text style={styles.textTrackTitle}>{track.artist}</Text>
-        <Text style={styles.textTrackArtist}>{track.title}</Text>
-      </View>
+      <Text style={styles.textTrackTitle}>{track.artist}</Text>
+      <Text style={styles.textTrackArtist}>{track.title}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   ContainerView: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    alignItems: 'center',
-    flexDirection: 'row',
-    height: 80,
-    marginBottom: 30,
   },
   ContainerItems: {
     width: '90%',

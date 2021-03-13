@@ -95,22 +95,16 @@ export default function Home() {
             }}
             thumbnail={{
               uri:
-                'https://static.biologianet.com/2020/05/jacare-do-papo-amarelo.jpg',
+                'https://firebasestorage.googleapis.com/v0/b/blink-102-rn.appspot.com/o/banner-locutores.jpg?alt=media&token=18a3c809-fc77-40ee-b17a-4c0569259cab',
             }}
             ref={(r) => (this.playerVideo = r)}
           />
         </View>
 
-        <View style={{width:'100%',height:'35%',marginTop:40}}>
-          <View
-            style={{
-              backgroundColor: '#f44',
-              width: '70%',
-              height: '100%',
-              position: 'absolute',
-              alignSelf: 'center',
-            }}></View>
-        </View>
+        <Image
+          style={styles.imageInfo}
+          source={require('../../assets/voce-escolhe-a-forma.jpg')}
+        />
         <View style={styles.btnPlayPauseContainer}>
           <TouchableOpacity
             style={styles.btnPlayPauseVideoPlayer}
@@ -137,7 +131,7 @@ export default function Home() {
         </View>
 
         <View style={styles.playerAudioContainer}>
-          <PlayerAudio ref={(component) => (this.PlayerAudio = component)} />
+          <PlayerAudio style={{backgroundColor:'#242424'}} />
         </View>
       </View>
     </SafeAreaView>
@@ -154,24 +148,28 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   videoPlayerContainer: {
-    backgroundColor: '#74B868',
     width: '100%',
+    
     zIndex: 2,
   },
+  imageInfo: {
+    resizeMode: 'contain',
+    marginTop:'5%',
+    width: '100%',
+    height: '45%',
+  },
   btnPlayPauseContainer: {
-    marginTop:30,
+    height:'10%',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-
-    height: 70,
-
     width: '100%',
     zIndex: 1,
   },
   btnPlayPause: {
+    resizeMode: 'contain',
     width: 70,
-    height: 70,
+    height: '80%',
     marginLeft: 30,
   },
   btnPlayPauseVideoPlayer: {
@@ -179,12 +177,18 @@ const styles = StyleSheet.create({
     height: 45,
   },
   playerAudioContainer: {
-    backgroundColor: '#242424',
     width: '100%',
+    resizeMode: 'contain',
+    height:'10%'
   },
   btnPlayPauseIcon: {
-    width: 70,
-    height: 70,
+    flex:1,
+    resizeMode: 'contain',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '70%',
+    height: '70%',
   },
   btnPlayPauseIconVideoPlayer: {
     width: 45,
