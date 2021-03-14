@@ -25,34 +25,38 @@ export default function Home() {
 
   function playPause() {
     if (Platform.OS === 'android') {
-      console.log('Caiu no Android');
       if (playPauseController == false) {
         setPlayIcon(!playIcon);
         playAndroid();
       } else {
         if (playVideoPlayer == false) {
+          pauseAndroid();
           setPlayIcon(true);
           this.playerVideo.onStartPress();
           setPlayVideoPlayer(true);
         } else {
           setPlayIcon(false);
-          this.playerVideo.pause();
+
+          this.playerVideo.stop();
+
           setPlayVideoPlayer(!playVideoPlayer);
         }
       }
     } else {
-      console.log('que estranho');
       if (playPauseController == false) {
         setPlayIcon(!playIcon);
         playpauseControl();
       } else {
         if (playVideoPlayer == false) {
+          ReactNativeAudioStreaming.pause();
           setPlayIcon(true);
           this.playerVideo.onStartPress();
           setPlayVideoPlayer(true);
         } else {
           setPlayIcon(false);
-          this.playerVideo.pause();
+
+          this.playerVideo.stop();
+
           setPlayVideoPlayer(!playVideoPlayer);
         }
       }
@@ -103,7 +107,7 @@ export default function Home() {
 
         <Image
           style={styles.imageInfo}
-          source={require('../../assets/voce-escolhe-a-forma.jpg')}
+          source={require('../../assets/voce-escolhe-a-forma-v4.png')}
         />
         <View style={styles.btnPlayPauseContainer}>
           <TouchableOpacity
@@ -131,7 +135,7 @@ export default function Home() {
         </View>
 
         <View style={styles.playerAudioContainer}>
-          <PlayerAudio style={{backgroundColor:'#242424'}} />
+          <PlayerAudio style={{backgroundColor: '#242424'}} />
         </View>
       </View>
     </SafeAreaView>
@@ -149,19 +153,20 @@ const styles = StyleSheet.create({
   },
   videoPlayerContainer: {
     width: '100%',
-    
+
     zIndex: 2,
   },
   imageInfo: {
     resizeMode: 'contain',
-    marginTop:'5%',
+    marginTop: '5%',
     width: '100%',
     height: '45%',
   },
   btnPlayPauseContainer: {
-    height:'10%',
+    height: '10%',
     flexDirection: 'row',
     justifyContent: 'center',
+    marginTop: '5%',
     alignItems: 'center',
     width: '100%',
     zIndex: 1,
@@ -179,10 +184,11 @@ const styles = StyleSheet.create({
   playerAudioContainer: {
     width: '100%',
     resizeMode: 'contain',
-    height:'10%'
+    height: '5%',
   },
   btnPlayPauseIcon: {
-    flex:1,
+    flex: 1,
+    marginTop: 5,
     resizeMode: 'contain',
     flexDirection: 'row',
     justifyContent: 'center',

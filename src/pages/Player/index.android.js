@@ -19,7 +19,7 @@ import {
 
 // that image is loaded without an image if it has no image without metadata
 const imageBackground =
-  'https://www.unifamma.edu.br/wp-content/uploads/2018/05/ADMIRAL02.png';
+  'https://firebasestorage.googleapis.com/v0/b/blink-102-rn.appspot.com/o/icon.png?alt=media&token=51bb121e-67f6-431c-8e7f-e8f6a2b5bc9f';
 
 // this is the initial of the notification
 import icone from '../../assets/icone.png';
@@ -157,8 +157,7 @@ export function PlayerAudio() {
 }
 
 const styles = StyleSheet.create({
-  ContainerView: {
-  },
+  ContainerView: {},
   ContainerItems: {
     width: '90%',
     flexDirection: 'row',

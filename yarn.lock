@@ -5751,10 +5751,9 @@ react-native-vector-icons@^8.0.0:
     prop-types "^15.7.2"
     yargs "^16.1.1"
 
-react-native-video-player@^0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/react-native-video-player/-/react-native-video-player-0.10.1.tgz#818e1aa18e724a2553095efa5c3ccd506f5a33ef"
-  integrity sha512-VUTNHzpj81RSvR8nST+8LGhYpaMbs5ePNV/YWXqh3ogfqjMOpHlf5vFabhGLJEI6Md9KjL1cQ+4gblYjgmuH2Q==
+"react-native-video-player@https://github.com/ShariqMush/react-native-fullscreenvideo-player/tarball/master":
+  version "0.8.0"
+  resolved "https://github.com/ShariqMush/react-native-fullscreenvideo-player/tarball/master#b4c99d2c41199a00d39837d02c856176be9daded"
 
 react-native-video@^5.1.1:
   version "5.1.1"
