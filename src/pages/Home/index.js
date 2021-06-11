@@ -76,7 +76,7 @@ export default function Home() {
           <VideoPlayer
             video={{
               uri:
-                'https://5ad482a77183d.streamlock.net/contatoblink102.com.br/contatoblink102.com.br/playlist.m3u8',
+                'https://video01.logicahost.com.br/blink102/blink102/playlist.m3u8',
             }}
             videoWidth={1600}
             duration={1}
