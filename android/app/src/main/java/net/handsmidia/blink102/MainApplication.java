@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.brentvatne.react.BuildConfig;
 import com.facebook.react.ReactApplication;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.guichaguri.trackplayer.TrackPlayer;
 import com.facebook.react.shell.MainReactPackage;
 import com.brentvatne.react.ReactVideoPackage;
@@ -29,6 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
           protected List<ReactPackage> getPackages() {
               return Arrays.<ReactPackage>asList(
                       new MainReactPackage(),
+            new VectorIconsPackage(),
             new TrackPlayer(),
                       new ReactVideoPackage(),
                       new BridgePackage()
