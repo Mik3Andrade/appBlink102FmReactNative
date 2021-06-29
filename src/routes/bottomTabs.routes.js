@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Text, View} from 'react-native';
+import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -7,6 +8,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Home from '../pages/NoticesScreen';
 import Ouvir from '../pages/AudioScreen';
 import Videos from '../pages/Videos';
+import {enableScreens} from 'react-native-screens';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,6 +27,7 @@ const icons = {
 function MyTabs() {
   return (
     <Tab.Navigator
+      detachInactiveScreens={true}
       screenOptions={({route}) => ({
         tabBarIcon: ({color, size}) => {
           const {name} = icons[route.name];
@@ -32,6 +35,12 @@ function MyTabs() {
         },
       })}
       tabBarOptions={{
+        labelStyle: {
+          fontFamily: 'RobotoCondensed-Bold',
+          fontSize: 14,
+          fontWeight: '400',
+          letterSpacing: -0.3,
+        },
         style: {
           backgroundColor: '#fff',
         },

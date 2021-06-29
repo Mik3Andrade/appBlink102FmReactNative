@@ -609,6 +609,8 @@
 
 // BACKUP AUDIO PLAYER
 
+//BACKUP AUDIO PLAYER
+
 // import React, { Component } from 'react';
 // import {
 //     NativeModules,
@@ -759,7 +761,8 @@
 //         justifyContent: 'center',
 //         alignItems: 'center',
 //         fontWeight:'bold',
-//         fontSize: 20,
+//         fontSize: 18,
+//         fontFamily: 'Karla-Regular',
 //         textAlign: 'center',
 //         color: '#000'
 //     }

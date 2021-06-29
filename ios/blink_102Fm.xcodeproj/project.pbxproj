@@ -18,7 +18,10 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* blink_102FmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* blink_102FmTests.m */; };
 		724BF4E73E36D8F59B6B8665 /* libPods-blink_102Fm-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5553523E2259F9AF8A9F9B /* libPods-blink_102Fm-tvOS.a */; };
+		7719B1460B7548B6B59634B4 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5103BD95A2246108A95FABB /* Karla-Regular.ttf */; };
+		7E41E38162AC45B28C226414 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 805FE71515C5472A9BEBD4CD /* RobotoCondensed-Bold.ttf */; };
 		831E3FFDE52F4196EB4D6AE8 /* libPods-blink_102Fm-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CAEE008D79A2BF1C5B2E27 /* libPods-blink_102Fm-tvOSTests.a */; };
+		9FF0D974743745EA9EE5AD64 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 235E70DD5D40449486A47E76 /* RobotoCondensed-Regular.ttf */; };
 		B48B11E1CDC39A9DD0F21CFE /* libPods-blink_102Fm-blink_102FmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E45DD4095773AA83B5A7E196 /* libPods-blink_102Fm-blink_102FmTests.a */; };
 		B93A9E2916701B3B522C6171 /* libPods-blink_102Fm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2683CFA478B2B1377939C5 /* libPods-blink_102Fm.a */; };
 /* End PBXBuildFile section */
@@ -53,6 +56,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = blink_102Fm/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = blink_102Fm/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = blink_102Fm/main.m; sourceTree = "<group>"; };
+		235E70DD5D40449486A47E76 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Regular.ttf"; path = "../src/assets/fonts/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		25202B7C8FF85DB1D6CCF702 /* Pods-blink_102Fm-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blink_102Fm-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-blink_102Fm-tvOSTests/Pods-blink_102Fm-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		25ADEEB45A5F45EF8EFB037C /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		27977D9325E36CEB00E265EC /* blink_102Fm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "blink_102Fm-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		69158FB2BB9A4C29B7E8668C /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		6D0F2095315E2BE2D86DCCC3 /* Pods-blink_102Fm-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blink_102Fm-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-blink_102Fm-tvOS/Pods-blink_102Fm-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		77D4382243EE309F90D714BD /* Pods-blink_102Fm-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blink_102Fm-tvOS.release.xcconfig"; path = "Target Support Files/Pods-blink_102Fm-tvOS/Pods-blink_102Fm-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		805FE71515C5472A9BEBD4CD /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoCondensed-Bold.ttf"; path = "../src/assets/fonts/RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = blink_102Fm/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8F07C1CAD504755BB8727C6 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		AA4B4B93AEEFEF34A54DDB4C /* Pods-blink_102Fm-blink_102FmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blink_102Fm-blink_102FmTests.debug.xcconfig"; path = "Target Support Files/Pods-blink_102Fm-blink_102FmTests/Pods-blink_102Fm-blink_102FmTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 		EE62358D9DDF40BEA9AD7D52 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		F21C038C9E32AD4EC6722D17 /* Pods-blink_102Fm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blink_102Fm.debug.xcconfig"; path = "Target Support Files/Pods-blink_102Fm/Pods-blink_102Fm.debug.xcconfig"; sourceTree = "<group>"; };
 		F481D050B3008A164FB31303 /* Pods-blink_102Fm-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blink_102Fm-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-blink_102Fm-tvOSTests/Pods-blink_102Fm-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5103BD95A2246108A95FABB /* Karla-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Karla-Regular.ttf"; path = "../src/assets/fonts/Karla-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +244,9 @@
 				B4E46F19C4B04CFABD32A4EB /* Octicons.ttf */,
 				B5932FB080B64E8DA93C165F /* SimpleLineIcons.ttf */,
 				EB876FCFCC434BC7BCD92597 /* Zocial.ttf */,
+				F5103BD95A2246108A95FABB /* Karla-Regular.ttf */,
+				235E70DD5D40449486A47E76 /* RobotoCondensed-Regular.ttf */,
+				805FE71515C5472A9BEBD4CD /* RobotoCondensed-Bold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -387,6 +396,9 @@
 			files = (
 				2768A3ED25FE3253002BB038 /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				7719B1460B7548B6B59634B4 /* Karla-Regular.ttf in Resources */,
+				9FF0D974743745EA9EE5AD64 /* RobotoCondensed-Regular.ttf in Resources */,
+				7E41E38162AC45B28C226414 /* RobotoCondensed-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,12 +779,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = M7T427NJ5L;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = blink_102Fm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 6.0;
+				MARKETING_VERSION = 6.4;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -793,11 +805,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = M7T427NJ5L;
 				INFOPLIST_FILE = blink_102Fm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 6.0;
+				MARKETING_VERSION = 6.4;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",

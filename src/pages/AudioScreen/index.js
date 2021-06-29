@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#74B868',
     width: '100%',
-    height: '100%',
+    height: '87%',
   },
   videoPlayerContainer: {
     width: '100%',

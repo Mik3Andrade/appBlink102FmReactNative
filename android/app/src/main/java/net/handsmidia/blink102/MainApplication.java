@@ -1,4 +1,5 @@
 package net.handsmidia.blink102;
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 
 import android.app.Application;
 import android.content.Context;
@@ -30,10 +31,11 @@ public class MainApplication extends Application implements ReactApplication {
           protected List<ReactPackage> getPackages() {
               return Arrays.<ReactPackage>asList(
                       new MainReactPackage(),
-            new VectorIconsPackage(),
-            new TrackPlayer(),
+                      new VectorIconsPackage(),
+                      new TrackPlayer(),
                       new ReactVideoPackage(),
-                      new BridgePackage()
+                      new BridgePackage(),
+                      new SafeAreaContextPackage()
               );
           }
 

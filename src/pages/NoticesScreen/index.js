@@ -6,10 +6,24 @@ import {
   StyleSheet,
   Image,
   StatusBar,
-  Modal,
+  FlatList,
 } from 'react-native';
+import api from '../../services/api';
+import Notices from './notices-content';
 
 export default function NoticesScreen() {
+  const [notices, setNotices] = useState([]);
+
+  useEffect(() => {
+    async function loadNotices() {
+      const response = await api.get('feed/json');
+      setNotices(response.data);
+      console.log(response.data);
+    }
+
+    loadNotices();
+  }, []);
+
   return (
     <View
       style={[
@@ -19,7 +33,8 @@ export default function NoticesScreen() {
           flexDirection: 'column',
         },
       ]}>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="dark-content" backgroundColor={'#fff'} />
+
       <View style={styles.topbar}>
         <SafeAreaView>
           <View style={styles.containerLogo}>
@@ -29,6 +44,14 @@ export default function NoticesScreen() {
             />
           </View>
         </SafeAreaView>
+      </View>
+
+      <View style={styles.flatListContainer}>
+        <FlatList
+          data={notices.items}
+          renderItem={({item}) => <Notices data={item} />}
+          keyExtractor={(item) => item.id}
+        />
       </View>
     </View>
   );
@@ -72,5 +95,10 @@ const styles = StyleSheet.create({
     height: '100%',
     resizeMode: 'contain',
     zIndex: 1,
+  },
+  flatListContainer: {
+    width: '100%',
+    height: '87%',
+    backgroundColor: '#fff',
   },
 });
