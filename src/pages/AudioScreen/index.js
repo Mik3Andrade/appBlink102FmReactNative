@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#74B868',
     width: '100%',
-    height: '87%',
+    height: Platform.OS === 'ios' ? '100%' : '100%',
   },
   videoPlayerContainer: {
     width: '100%',
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginTop: '5%',
     width: '100%',
-    height: '45%',
+    height: '38%',
   },
   btnPlayPauseContainer: {
     height: '10%',
